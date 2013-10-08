@@ -6,7 +6,7 @@
         id        = "com.capsulaweb.batman"
         version   = "1.0.0">
 
-    <name>Batman 2.0/name>
+    <name>Batman 2.0</name>
 
     <description>
         Esta es una aplicacion basada en html 5 y java script usando la libreria jquery. Publicada en todos los paises de habla hispana.
