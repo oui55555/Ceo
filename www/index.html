@@ -1,68 +1,81 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-  <meta HTTP-EQUIV="REFRESH" content="0; url=http://capsulaweb.com.mx/ceo/login.php">
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <title></title>
-  
-  
+    <head>
+        <!-- 
+        <meta name="format-detection" content="telephone=no" />
+        WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <meta http-equiv="refresh" content="0; url=http://capsulaweb.com.mx/ceo/login.php" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Ceo Mobil Office</title>
 
-  <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css">
-  
-  <!-- Extra Codiqa features -->
-  <link rel="stylesheet" href="css/codiqa.ext.css">
-  
-  <!-- jQuery and jQuery Mobile -->
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery.mobile-1.3.2.js"></script>
-
-
-  <!-- Extra Codiqa features -->
-  <script src="js/codiqa.ext.js"></script>
-  <script src="js/login.js"></script>
-  
-     <script src="phonegap.js"></script>
-
-</head>
-<body onload="init()">
-<!-- Home -->
-<div data-role="page" id="page1">
-    <div data-theme="c" data-role="header" >
-        <img style="margin-top: 30px;" src="img/bolitas.png"> 
-    </div>
-    
-    <div data-role="content">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.css">
+        <link rel="stylesheet" type="text/css" href="css/ceoMO.css">
         
-     <form id="loginForm">
-      <fieldset class="login">
-        <div data-role="fieldcontain">
-             <img id="usuario" src="img/usuario1.png">
-            <input name="user" id="user" placeholder="usuario" value="" type="text">
-        </div>
-        <div data-role="fieldcontain">
-            <img id="candado" src="img/candado1.png">
-            <input name="pass" id="pass" placeholder="contraseña" value="" type="password">
-        </div>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.2.js"></script>
+
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>   
+        <style type="text/css">
+            .loader{text-align: center;  }
+            .aviso{
+                color:#353535; 
+                text-align:center; 
+                position: relative;
+                
+                animation:aviso 1s alternate infinite;
+                -webkit-animation:aviso 1s alternate infinite;  
+                -webkit-animation-delay: 8s;
+                -moz-animation-delay: 8s; }
+
+                    
+            @keyframes aviso {
+                from{color: rgba(35,35,35); } 
+                to{color:#efefef; }
+            }         
+            
+            -webkit-@keyframes aviso {
+                    from{color: rgba(35,35,35); } 
+                    to{color:#efefef; }
+                }         
+        </style>
+  
+    </head>
+    <body>
    
-    <input type="submit" data-theme="c" value="Entrar" id="submitButton">
-        </fieldset>
-</form>
-          
+        <section data-role="page" data-theme="a" id="login">
 
-    </div>
+            <header data-role="header" style="text-align:center;">
+                    <img  src="img/bolitas.png" alt="Ceo" style="margin:30px 0;">
+                                      
+            </header>
+            
+            <div data-role="content">
+                <p class="loader" >
+                    <img src="css/images/ajax-loader.gif">
+                </p>
+                <p class="aviso">Buscando conexión a internet</p>
+
+            </div>
+            
+             
+     <!-- FOOTER < -->
+     <footer data-theme="b" data-role="footer" data-position="fixed">
+        <h1><img alt="- MOBIL OFFICE -" src="img/mobile1.png"></h1>  
+    </footer>
+    <!-- > FOOTER -->
+
+        </section>
 
 
-    <div data-theme="c" data-role="footer">
-        <img src="img/mobile1.png">
-    </div>
-</div>
-    <script>
-     $("#loginPage").live("pageinit", function(e) {
-            checkPreAuth();
-        });
-    </script>
-</body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>
+
+s
